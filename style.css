@@ -331,6 +331,11 @@ body.ready .id-wrap.up { transition-delay: 0.3s; }
 .shots span { font-size: 0.82rem; line-height: 1.55; color: var(--muted); }
 .shots span b { display: block; font-family: var(--head); font-size: 0.92rem; font-weight: 700; color: var(--text); }
 @media (max-width: 600px) { .shots { grid-template-columns: 1fr; } }
+.why-letter { max-width: 760px; margin: 0 auto; padding: 34px 38px; border-radius: 22px; background: linear-gradient(160deg, rgba(0, 102, 100, 0.18), var(--card)); border: 1px solid var(--border-2); display: flex; flex-direction: column; gap: 16px; }
+.why-letter p { color: var(--muted); line-height: 1.95; text-indent: 2em; }
+.why-letter p b { color: var(--text); font-weight: 600; }
+.why-letter .why-sign { text-indent: 0; text-align: right; margin-top: 6px; font-family: var(--head); font-weight: 700; color: var(--text); }
+@media (max-width: 600px) { .why-letter { padding: 24px 20px; } .why-letter p { text-indent: 1.2em; } }
 .gh-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border-2); font-family: var(--head); font-size: 0.85rem; font-weight: 600; color: var(--text); transition: 0.25s; }
 .gh-link i { font-size: 1.05rem; }
 .gh-link:hover, .gh-link:focus-visible { border-color: var(--accent); background: rgba(var(--rgb), 0.1); }
