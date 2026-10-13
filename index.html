@@ -224,14 +224,14 @@
               <span><i class="fa-brands fa-telegram"></i> ส่งเข้า Telegram</span>
             </div>
             <div class="shots shots-ge">
-              <a href="shots/ge-setup.jpg" target="_blank"><img src="shots/ge-setup.jpg" alt="ESP32-CAM ต่อสาย USB วางข้าง keyboard จอแสดง code และหน้าต่าง GuardianEye" loading="lazy" /><span><b>ของจริงบนโต๊ะ</b>บอร์ด ESP32-CAM ต่อไฟ แล้วส่งภาพเข้าคอมที่รัน GuardianEye</span></a>
+              <a href="shots/ge-setup.jpg" target="_blank"><img src="shots/ge-setup.jpg" alt="ESP32-CAM ต่อสาย USB วางข้าง keyboard จอแสดง code และหน้าต่าง GuardianEye" loading="lazy" /><span><b>ของจริงบนโต๊ะ</b>บอร์ด ESP32-CAM ต่อไฟ แล้วส่งภาพเข้าคอมที่ run GuardianEye</span></a>
               <a href="shots/ge-face.jpg" target="_blank"><img src="shots/ge-face.jpg" alt="GuardianEye ตีกรอบใบหน้าและขึ้นชื่อ mom พร้อมโครงร่างกาย" loading="lazy" /><span><b>จำหน้าได้</b>รู้ว่าเป็นแม่ (mom) พร้อมวาดโครงร่างกายตามท่าทาง</span></a>
               <a href="shots/ge-fall.jpg" target="_blank"><img src="shots/ge-fall.jpg" alt="สถานะ FALL_SUSPECTED ตอนทดสอบนอนที่พื้น" loading="lazy" /><span><b>สงสัยว่าล้ม</b>ทดสอบนอนที่พื้น ระบบนับเวลาก่อน ถ้าไม่ลุกเกิน 10 วินาทีถึงจะเตือน</span></a>
               <a href="shots/ge-alert.jpg" target="_blank"><img src="shots/ge-alert.jpg" alt="ข้อความแจ้งเตือนใน Telegram ว่าตรวจพบมีคนล้มและคุณแม่ล้ม" loading="lazy" /><span><b>แจ้งเข้ามือถือ</b>ส่งรูปเข้า Telegram ถ้ารู้จักหน้าจะบอกชื่อ เช่น "คุณแม่ ล้มที่ห้องนั่งเล่น"</span></a>
             </div>
             <ul class="feat-list">
               <li>ตอนแรกแค่นั่งเก้าอี้หรือก้มเก็บของมันก็เตือนแล้ว เลยต้องเพิ่มเงื่อนไข ให้ดูว่าตัวเอียงแค่ไหน สะโพกตกเร็วไหม แล้วต้องนอนอยู่เกิน 10 วินาที ถึงจะนับว่าล้ม</li>
-              <li>ตัว ESP32-CAM มี RAM น้อย run AI เองไม่ได้ เลยให้มันส่งภาพมาอย่างเดียว ให้คอมคิดแทน</li>
+              <li>ตัว ESP32-CAM มี RAM น้อยจน run AI เองไม่ได้ เลยให้มันส่งภาพมาอย่างเดียว ให้คอมคิดแทน</li>
               <li>จำหน้าคนในบ้านได้ (ใช้ OpenCV YuNet + SFace) ถ้าในภาพมีหลายคน มันจะจำหน้าไว้ตั้งแต่ตอนเดินผ่าน ล้มแบบหันหลังให้กล้องก็ยังรู้ว่าเป็นใคร ส่วนคนที่ไม่รู้จักจะเตือนว่าเป็นคนแปลกหน้า</li>
               <li>ถ้า Wi-Fi สะดุดหรือกล้อง reboot มันจะต่อกล้องใหม่เองทุก 3 วินาที ไม่ต้องปิดเปิดโปรแกรมใหม่</li>
             </ul>
@@ -307,7 +307,7 @@
             <p class="learn"><i class="fa-regular fa-lightbulb"></i> ทำให้คนอื่นใช้ยากกว่าทำใช้เองมาก ทุกปุ่มต้องเข้าใจง่าย และต้องไม่ทำเครื่องใครพัง</p>
             <div class="dl-box">
               <a class="btn btn-grad" href="https://github.com/0829271471po-wq/polo-optimizer/releases/download/v1.3/PoloOptimizer-Setup-1.3.exe"><i class="fa-solid fa-download"></i> Download Polo Optimizer</a>
-              <small>Windows 10 / 11 · v1.3 · 14.8 MB<br />ถ้า Windows ขึ้นจอฟ้าเตือน ให้กด More info → Run anyway (เพราะโปรแกรมยังไม่ได้ซื้อใบรับรอง code signing)</small>
+              <small>Windows 10 / 11 · v1.3 · 14.8 MB<br />ถ้า Windows ขึ้นจอฟ้าเตือน ให้กด More info → Run anyway (เพราะยังไม่ได้ซื้อใบรับรอง code signing ให้โปรแกรม)</small>
             </div>
             <div class="tags"><span>Python</span><span>customtkinter</span><span>PowerShell</span><span>winget</span><span>Gemini API</span><span>PyInstaller</span><span>Inno Setup</span></div>
             <a class="gh-link" href="https://github.com/0829271471po-wq/polo-optimizer" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> ดู code บน GitHub</a>
@@ -338,7 +338,7 @@
         </article>
         <article class="cert card" data-anim="zoom">
           <a class="cert-img" href="certs/samsung-genai-software-dev.png" target="_blank"><img src="certs/samsung-genai-software-dev.png" alt="ใบประกาศ Generative AI in Software Development จาก Samsung Innovation Campus" loading="lazy" /></a>
-          <div class="cert-body"><small>11 OCT 2026 · SAMSUNG INNOVATION CAMPUS</small><h4>Generative AI in Software Development</h4><p>เรียนว่าจะใช้ AI ช่วยเขียนโปรแกรมยังไงให้ถูกวิธี เพราะตอนทำ project ผมก็ใช้ AI ช่วยตอนติดอยู่แล้ว</p></div>
+          <div class="cert-body"><small>11 OCT 2026 · SAMSUNG INNOVATION CAMPUS</small><h4>Generative AI in Software Development</h4><p>เรียนว่าจะใช้ AI ช่วยเขียนโปรแกรมยังไงให้ถูกวิธี เพราะตอนทำ project ผมก็ใช้ AI ช่วยเวลาติดปัญหาอยู่แล้ว</p></div>
         </article>
         <article class="cert card" data-anim="zoom">
           <a class="cert-img" href="certs/samsung-python-data-structures.png" target="_blank"><img src="certs/samsung-python-data-structures.png" alt="ใบประกาศ Python Mini-Course: Complex Data Structures จาก Samsung Innovation Campus" loading="lazy" /></a>
