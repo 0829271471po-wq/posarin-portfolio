@@ -19,8 +19,7 @@ $token = (Get-Content $tokenFile -Raw).Trim()
 # เอาเฉพาะไฟล์ที่เว็บใช้ (ไม่เอา PDF, สคริปต์นี้ หรือไฟล์อื่นในโฟลเดอร์)
 $include = @("index.html", "style.css", "script.js", "card3d.js", "vendor\three.min.js", "favicon.svg", "favicon.png", "apple-touch-icon.png") +
   (Get-ChildItem "$root\shots" -File | ForEach-Object { "shots\" + $_.Name }) +
-  (Get-ChildItem "$root\certs" -Filter *.png -File | ForEach-Object { "certs\" + $_.Name }) +
-  (Get-ChildItem "$root\downloads" -File -ErrorAction SilentlyContinue | ForEach-Object { "downloads\" + $_.Name })
+  (Get-ChildItem "$root\certs" -Filter *.png -File | ForEach-Object { "certs\" + $_.Name })
 
 # สร้าง zip เอง เพราะ Compress-Archive ของ Windows PowerShell ใส่ \ ในชื่อโฟลเดอร์ ซึ่ง Netlify ไม่อ่านเป็นโฟลเดอร์
 Add-Type -AssemblyName System.IO.Compression, System.IO.Compression.FileSystem
