@@ -239,7 +239,8 @@
   try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); }
   catch { loadFonts().then(fallback); return; }
   renderer.setClearColor(0x000000, 0);
-  renderer.shadowMap.enabled = true;
+  const lite = !finePointer || innerWidth < 760;   // phones: lighter rendering so scrolling stays smooth
+  renderer.shadowMap.enabled = !lite;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -525,7 +526,7 @@
   function layout() {
     const w = stage.clientWidth, h = stage.clientHeight, cw = canvas.clientWidth, ch = canvas.clientHeight;
     if (!w || !h || !cw || !ch) return;
-    renderer.setPixelRatio(Math.min(2, devicePixelRatio || 1));
+    renderer.setPixelRatio(Math.min(lite ? 1.25 : 2, devicePixelRatio || 1));
     renderer.setSize(cw, ch, false);
     const top = ANCHOR.y + 0.55, bottom = ANCHOR.y - ROPE - ROD - 0.5, halfW = 1.5;   // the canvas extends past the frame, so the swing needs no extra margin
     const tanH = Math.tan(THREE.MathUtils.degToRad(FOV / 2));
