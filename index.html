@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posarin Sukdee | Portfolio วิศวะคอม</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#05120e" />
+  <meta name="description" content="Portfolio ของโปสรินท์ สุขดี (โปโล) ม.6 โรงเรียนอยุธยาวิทยาลัย สำหรับยื่นวิศวกรรมคอมพิวเตอร์ ม.เกษตรศาสตร์" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Anuphan:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading">
+  <!-- ===== INTRO: circuit board + name + progress ===== -->
+  <div class="intro" id="intro">
+    <div class="intro-inner">
+      <div class="intro-top"><span>POSARIN SUKDEE</span><span>PORTFOLIO · 2026</span></div>
+      <pre class="boot" id="boot"></pre>
+      <div class="intro-center">
+        <svg class="board" id="board" viewBox="0 0 600 400" aria-hidden="true">
+          <defs>
+            <radialGradient id="chipGlow"><stop offset="0%" stop-color="#c8d63c" stop-opacity="0.5" /><stop offset="100%" stop-color="#c8d63c" stop-opacity="0" /></radialGradient>
+          </defs>
+          <circle class="glow" cx="300" cy="200" r="150" fill="url(#chipGlow)" />
+          <circle class="orbit o1" cx="300" cy="200" r="92" />
+          <circle class="orbit o2" cx="300" cy="200" r="78" />
+          <g id="traces"></g>
+          <rect class="chip" x="250" y="150" width="100" height="100" rx="12" />
+          <path class="mark" d="M285 228 L285 172 L303 172 Q318 172 318 186 Q318 200 303 200 L285 200" />
+          <path class="mark accent" d="M300 214 L312 226" />
+        </svg>
+        <h1 class="intro-name">Posarin Sukdee<span>.</span></h1>
+        <p class="intro-roles">NOT JUST APPLYING · ALREADY BUILDING</p>
+        <div class="intro-bar">
+          <div class="track"><span id="introFill"></span></div>
+          <div class="meta"><span id="introStatus">INITIALIZING</span><span id="introPct">0%</span></div>
+        </div>
+      </div>
+      <div class="intro-bottom"><span>TARGET · CPE @ KU</span><em>Click เพื่อข้าม</em></div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <canvas id="pcb" aria-hidden="true"></canvas>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="bg-glow" id="bgGlow"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-progress" id="navProgress"></div>
+    <a href="#home" class="brand"><i></i>Posarin Sukdee</a>
+    <nav class="pill" id="pill">
+      <span class="pill-bg" id="pillBg"></span>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#activities">Certificates</a>
+      <a href="#contact">Next</a>
+    </nav>
+    <div class="nav-right">
+      <button class="round-btn" id="soundBtn" aria-label="เปิด/ปิดเสียง" title="เปิด/ปิดเสียง click"><i class="fa-solid fa-volume-high"></i></button>
+      <button class="round-btn burger" id="burger" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="side-btns">
+    <button id="upBtn" aria-label="ขึ้น"><i class="fa-solid fa-chevron-up"></i></button>
+    <button id="downBtn" aria-label="ลง"><i class="fa-solid fa-chevron-down"></i></button>
+  </div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <p class="eyebrow up"><i class="live"></i> TCAS70 · COMPUTER ENGINEERING PORTFOLIO</p>
+        <h1 class="headline up"><span id="typed">ผมเริ่มทำไปแล้ว.</span><b class="caret"></b></h1>
+        <p class="intro-text up">
+          ผมไม่ได้รอให้เข้ามหาวิทยาลัยก่อนแล้วค่อยเริ่ม ตอนนี้ผมมีกล้อง AI จับคนล้มที่ทำจากกล้องตัวละ 300 บาท
+          AI ที่จำได้ว่าเราเคยคุยอะไรกันไว้ และโปรแกรมดูแลคอมที่ทำเป็นตัวติดตั้งให้คนอื่นลงได้
+          ผม <b>โปสรินท์ สุขดี (โปโล)</b> ม.6 โรงเรียนอยุธยาวิทยาลัย <b>GPAX 3.20</b> (5 ภาคเรียน)
+          Website นี้รวบรวมสิ่งที่ผมทำไปแล้ว ส่วน <b>วิศวกรรมคอมพิวเตอร์ ม.เกษตรศาสตร์</b> คือที่ที่ผมอยากไปทำให้มันดีกว่านี้
+        </p>
+        <div class="cta up">
+          <a href="#projects" class="btn btn-grad">ดูผลงาน <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#about" class="btn btn-line">รู้จักผมมากขึ้น</a>
+        </div>
+      </div>
+
+      <div class="id-wrap up">
+        <!-- 3D student ID on a lanyard: WebGL scene + rope physics in card3d.js -->
+        <div class="id3d-stage" id="idStage">
+          <canvas id="idCanvas" aria-label="บัตรนักเรียน 3D ของ Posarin Sukdee ลากเพื่อเหวี่ยงและหมุน"></canvas>
+          <div class="id3d-hud" aria-hidden="true">
+            <span class="hud-tl">ID://PS-2026-CPE</span>
+            <span class="hud-tr" id="hudYaw">YAW 000°</span>
+            <span class="hud-bl">LANYARD · SPRING PHYSICS</span>
+          </div>
+        </div>
+        <div class="id3d-hint">
+          <span><i class="fa-solid fa-hand-pointer"></i> ลาก = เหวี่ยง</span>
+          <span><i class="fa-solid fa-arrows-left-right"></i> สะบัดข้าง = หมุน 360°</span>
+          <button class="flip-btn" id="flipBtn" type="button"><i class="fa-solid fa-rotate"></i> พลิกบัตร</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="m-track" id="mTrack">
+        <span>Python</span><i>✦</i><span>JavaScript</span><i>✦</i><span>C</span><i>✦</i><span>ESP32-CAM</span><i>✦</i><span>OpenCV</span><i>✦</i><span>MediaPipe</span><i>✦</i><span>LLM</span><i>✦</i><span>Telegram Bot</span><i>✦</i><span>PC Hardware</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ===== 01 ABOUT ===== -->
+    <section class="section" id="about">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>01 — ABOUT ME</span>
+        <h2 class="split">ทำไมต้อง <span class="hl">วิศวะคอม?</span></h2>
+        <p>เล่าสั้นๆ ว่าผมมาสนใจสายนี้ได้ยังไง</p>
+      </header>
+      <div class="bento" data-stagger>
+        <article class="cell cell-why card" data-anim="left">
+          <span class="tag">MY STORY</span>
+          <h3>แค่อยากให้เกมลื่น จนอยากรู้ว่าคอมคิดยังไง</h3>
+          <p>
+            ผมชอบเล่นเกม เลยอยากรีดประสิทธิภาพคอมให้ได้มากที่สุด ลง driver ปรับแต่งเครื่องเอง
+            แต่พอปรับไปก็มีปัญหาตามมา เลยต้องนั่งหาสาเหตุเองจนเจอ ยิ่งแก้บ่อยก็ยิ่งได้รู้ว่าข้างในมันทำงานกันยังไง
+          </p>
+          <p>
+            พอแก้ปัญหาคอมบ่อยๆ ก็เริ่มอยากรู้ว่าโปรแกรมที่ใช้กันทุกวันเขียนขึ้นมายังไง เลยลองหัดเขียน code มีเรียน CS50 บ้าง ทำ website เล็กๆ บ้าง
+            แล้วค่อยๆ ทำของที่ใหญ่ขึ้น จนได้ต่อกล้อง ESP32-CAM เข้ากับคอมเพื่อทำระบบเตือนคนล้ม และเขียน AI ที่จำเรื่องของผมได้
+          </p>
+          <p>
+            สองงานนี้ทำให้ผมได้จับทั้ง hardware และ software ในงานเดียวกัน และรู้ตัวว่ายังเข้าใจมันไม่ลึกพอ
+            ผมเลยอยากเรียน <b>วิศวกรรมคอมพิวเตอร์</b> ให้เข้าใจตั้งแต่วงจรไปจนถึงโปรแกรมจริงๆ
+          </p>
+        </article>
+        <!-- terminal card (style & motion from design 1, content from v8) -->
+        <article class="cell cell-term card" data-anim="right">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="term-bar"><span class="dots"><i></i><i></i><i></i></span><span>posarin@home:~</span></div>
+              <pre id="termBody"></pre>
+            </div>
+          </div>
+          <span class="pbadge pb1"><i class="fa-solid fa-camera"></i> ESP32-CAM</span>
+          <span class="pbadge pb2"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="pbadge pb3"><i class="fa-solid fa-screwdriver-wrench"></i> PC Hardware</span>
+        </article>
+        <article class="cell stat card" data-anim="zoom"><strong data-to="3">0</strong><span>Projects</span><small>กล้องจับคนล้ม · AI ส่วนตัว · Polo Optimizer</small></article>
+        <article class="cell stat card" data-anim="zoom"><strong data-to="3">0</strong><span>Languages</span><small>Python · JavaScript · C</small></article>
+        <article class="cell cell-quote card" data-anim="flip">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>ไม่รู้ว่ามันทำงานยังไง ก็ <span class="hl">แกะดูเองก่อน</span></p>
+        </article>
+        <article class="cell stat card" data-anim="zoom"><strong data-to="8">0</strong><span>Certificates</span><small>Samsung · Cisco · HackerRank</small></article>
+      </div>
+
+      <!-- Skills (part of About) -->
+      <div class="sub-head" data-anim="up">
+        <h3><i class="fa-solid fa-bolt"></i> สิ่งที่ผมทำเป็น</h3>
+        <p>ส่วนใหญ่เรียนเองจากการลงมือทำ project และ online course</p>
+      </div>
+      <div class="skills">
+        <div class="stack-card card" data-anim="left">
+          <div class="stack-head">
+            <span class="label"><i class="live"></i> SKILL STACK</span>
+            <span class="chip"><i class="fa-solid fa-hand-pointer"></i> HOVER TO EXPLORE</span>
+          </div>
+          <div class="tiles">
+            <div class="tile"><i class="fa-brands fa-python"></i><h4>Python</h4><em>ใช้ทำทั้ง 3 project</em></div>
+            <div class="tile"><i class="fa-brands fa-js"></i><h4>JavaScript</h4><em>ผ่าน HackerRank ถึง Intermediate</em></div>
+            <div class="tile"><i class="fa-solid fa-code"></i><h4>C</h4><em>กำลังเรียน CS50</em></div>
+            <div class="tile"><i class="fa-solid fa-screwdriver-wrench"></i><h4>PC Hardware</h4><em>แต่ง/แก้คอมเอง</em></div>
+          </div>
+          <div class="activity"><span class="label">STATUS</span><div class="wave" id="wave"></div><strong>ยังเรียนอยู่</strong></div>
+        </div>
+        <div class="skill-side" data-stagger>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-screwdriver-wrench"></i><div><h4>แต่งและแก้ปัญหาคอม</h4><p>ปรับแต่งเครื่องให้เล่นเกมได้ลื่นขึ้น ลง driver และไล่หาสาเหตุเองเวลาปรับแล้วเกิดปัญหา จุดเริ่มต้นที่ทำให้ผมสนใจคอมพิวเตอร์</p></div></div>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-eye"></i><div><h4>AI กับภาพจากกล้อง</h4><p>ใช้ MediaPipe จับท่าทางร่างกาย และ OpenCV จดจำใบหน้า ใน GuardianEye</p></div></div>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-brain"></i><div><h4>ต่อ LLM เข้ากับโปรแกรม</h4><p>เรียก API แบบ stream ให้ AI เรียก function เองได้ (tool calling) และเก็บความจำเป็น file ใน AI ส่วนตัวที่ผมเขียน</p></div></div>
+          <div class="svc card" data-anim="right"><i class="fa-solid fa-microchip"></i><div><h4>ESP32-CAM</h4><p>Upload code ผ่าน Arduino IDE ต่อกล้องเข้า Wi-Fi แล้วดึงภาพสดมาประมวลผลบนคอม</p></div></div>
+        </div>
+      </div>
+
+      <!-- Journey (part of About) -->
+      <div class="sub-head" data-anim="up">
+        <h3><i class="fa-solid fa-route"></i> กว่าจะมาถึงตรงนี้</h3>
+        <p>จากคนที่แค่อยากให้เกมลื่น มาเป็นคนที่เขียนโปรแกรมเอง กดดูทีละช่วงได้ครับ</p>
+      </div>
+      <div class="stepper" id="stepper" data-anim="clip">
+        <button class="step active"><b>01</b><span>เล่นเกม</span></button>
+        <button class="step"><b>02</b><span>หัดเขียน code</span></button>
+        <button class="step"><b>03</b><span>ทำของจริง</span></button>
+        <button class="step"><b>NEXT</b><span>CPE @ KU</span></button>
+        <div class="step-line"><span id="stepFill"></span></div>
+      </div>
+      <div class="step-panel" id="stepPanel" data-anim="up"></div>
+    </section>
+
+    <!-- ===== 02 PROJECTS ===== -->
+    <section class="section" id="projects">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>02 — PROJECTS</span>
+        <h2 class="split">ไม่ได้แค่คิด <span class="hl">แต่ทำออกมาแล้ว.</span></h2>
+        <p>ทุกงานผมลงมือทำเอง ตอนติดก็มีหาใน internet กับถาม AI ช่วยบ้าง แล้วเอาไปลองกับของจริง ทั้งกล้องจริง คนจริง และคอมจริง</p>
+      </header>
+      <div class="works" data-stagger>
+        <article class="work feature card" data-cat="hw sw" data-anim="flip">
+          <span class="work-no">01</span><div class="work-icon"><i class="fa-solid fa-video"></i></div>
+          <div>
+            <span class="feat-badge"><i class="fa-solid fa-video"></i> AI CAMERA</span>
+            <h3>GuardianEye กล้องจับคนล้ม</h3>
+            <p>ที่บ้านผมมียายอยู่ด้วย ผมเลยคิดอยู่บ่อยๆ ว่าถ้าวันไหนยายล้มตอนที่ไม่มีใครอยู่ใกล้ๆ จะทำยังไง เลยลองเอากล้อง ESP32-CAM (ตัวละประมาณ 300 บาท) มาตั้งไว้ ให้มันส่งภาพเข้าคอม แล้วให้คอมดูว่ามีคนล้มไหม ถ้าล้มแล้วไม่ลุกขึ้นมา มันจะส่งรูปเข้า Telegram พร้อมบอกว่าใครล้ม คนในบ้านจะได้รู้ทันที</p>
+            <div class="flow">
+              <span><i class="fa-solid fa-camera"></i> กล้อง ESP32</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-solid fa-person-falling"></i> ดูท่าทาง</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-solid fa-face-smile"></i> ดูหน้าว่าใคร</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-brands fa-telegram"></i> ส่งเข้า Telegram</span>
+            </div>
+            <ul class="feat-list">
+              <li>ตอนแรกแค่นั่งเก้าอี้หรือก้มเก็บของมันก็เตือนแล้ว เลยต้องเพิ่มเงื่อนไข ให้ดูว่าตัวเอียงแค่ไหน สะโพกตกเร็วไหม แล้วต้องนอนอยู่เกิน 10 วินาที ถึงจะนับว่าล้ม</li>
+              <li>ตัว ESP32-CAM มี RAM น้อย run AI เองไม่ได้ เลยให้มันส่งภาพมาอย่างเดียว ให้คอมคิดแทน</li>
+              <li>ถ้าในภาพมีหลายคน มันจะจำหน้าไว้ตั้งแต่ตอนเดินผ่าน ล้มแบบหันหลังให้กล้องก็ยังรู้ว่าเป็นใคร</li>
+              <li>ถ้า Wi-Fi สะดุดหรือกล้อง reboot มันจะต่อกล้องใหม่เองทุก 3 วินาที ไม่ต้องปิดเปิดโปรแกรมใหม่</li>
+            </ul>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ทำให้มันจับได้ว่ามีคนล้มไม่ยากเท่าไหร่ ที่ยากคือทำยังไงไม่ให้มันเตือนมั่ว เพราะถ้าเตือนผิดบ่อยๆ คนในบ้านก็จะไม่สนใจมันแล้ว</p>
+            <div class="tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>ESP32-CAM</span><span>Telegram API</span></div>
+          </div>
+        </article>
+        <article class="work feature card" data-cat="sw" data-anim="flip">
+          <span class="work-no">02</span><div class="work-icon"><i class="fa-solid fa-brain"></i></div>
+          <div>
+            <span class="feat-badge"><i class="fa-solid fa-brain"></i> PERSONAL AI</span>
+            <h3>AI ส่วนตัวที่จำเรื่องของเราได้</h3>
+            <p>Chatbot ทั่วไปพอเปิด chat ใหม่ก็ลืมหมดว่าเราเคยคุยอะไรไว้ เลยลองเขียน AI ไว้คุยเองใน Telegram ให้มันเก็บความจำเป็น file ไว้ในคอม บอกอะไรไปแล้วมันจำได้ จดโน้ตให้ได้ ส่งรูปให้มันดูก็ได้</p>
+            <div class="flow">
+              <span><i class="fa-brands fa-telegram"></i> พิมพ์ใน Telegram</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-solid fa-microchip"></i> ส่งไปให้ LLM</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-solid fa-database"></i> จำ / จดโน้ต</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-solid fa-reply"></i> ตอบกลับ</span>
+            </div>
+            <ul class="feat-list">
+              <li>ให้ AI เรียก function เองได้ (tool calling) อย่างพิมพ์ว่า "จำไว้นะ" มันก็จะไปบันทึกเอง ถ้าข้อมูลเก่าผิดก็ลบแล้วจำใหม่</li>
+              <li>ตอนทำระบบค้นหา ภาษาไทยมันไม่เว้นวรรค ตัดคำยาก เลยใช้วิธีเทียบทีละ 3 ตัวอักษรแทน</li>
+              <li>คุยครบ 8 ข้อความ มันจะย้อนอ่าน chat แล้วสรุปว่าผมเป็นคนแบบไหน เอาไว้ปรับวิธีตอบ</li>
+              <li>รอคำตอบนานๆ แล้วโดน Cloudflare ตัด เลยเปลี่ยนเป็นค่อยๆ รับคำตอบมาทีละท่อน (stream)</li>
+            </ul>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ทำเสร็จแล้วรู้เลยว่าตัว model ไม่ใช่ส่วนที่ยาก ส่วนที่ต้องคิดเยอะคือจะเก็บอะไรไว้ แล้วจะส่งอะไรให้มันดูบ้าง</p>
+            <div class="tags"><span>Python</span><span>LLM</span><span>Tool Calling</span><span>Telegram Bot</span><span>JSON</span></div>
+          </div>
+        </article>        <article class="work feature card" data-cat="sw" data-anim="flip">
+          <span class="work-no">03</span><div class="work-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <div>
+            <span class="feat-badge"><i class="fa-brands fa-windows"></i> WINDOWS APP</span>
+            <h3>Polo Optimizer โปรแกรมดูแลคอมแบบเปิดทีเดียวจบ</h3>
+            <p>โปรแกรมดูแลคอม Windows ที่รวมทุกอย่างไว้ในที่เดียว ทั้งลง app หา driver ล้าง file ขยะ และปรับเครื่องเล่นเกม คนที่ใช้คอมไม่เก่งก็กดใช้เองได้ และแจกเป็น Setup.exe ให้คนอื่นลงได้</p>
+            <div class="flow">
+              <span><i class="fa-solid fa-magnifying-glass"></i> ตรวจเครื่องจริง</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-solid fa-robot"></i> AI สรุปอาการ</span><i class="fa-solid fa-arrow-right"></i>
+              <span><i class="fa-solid fa-hand-pointer"></i> ผู้ใช้กด "ทำเลย" เอง</span>
+            </div>
+            <div class="shots">
+              <a href="shots/optimizer-welcome.png" target="_blank"><img src="shots/optimizer-welcome.png" alt="หน้าเริ่มต้นของ Polo Optimizer" loading="lazy" /><span><b>หน้าเริ่มต้น</b>แนะนำโปรแกรมและวิธีใช้ 4 ขั้นตอน</span></a>
+              <a href="shots/optimizer-home.png" target="_blank"><img src="shots/optimizer-home.png" alt="หน้าแรก คะแนนสุขภาพเครื่อง 80 และ CPU RAM disk" loading="lazy" /><span><b>หน้าแรก</b>ให้คะแนนสุขภาพเครื่อง บอกว่าควรแก้อะไร กดแก้ได้ทันที</span></a>
+              <a href="shots/optimizer-ai.png" target="_blank"><img src="shots/optimizer-ai.png" alt="หน้าผู้ช่วย AI พร้อมคำถามตัวอย่าง" loading="lazy" /><span><b>ผู้ช่วย AI</b>เล่าอาการเป็นภาษาพูด AI ตรวจเครื่องจริงแล้วบอกวิธีแก้</span></a>
+              <a href="shots/optimizer-install.png" target="_blank"><img src="shots/optimizer-install.png" alt="หน้าติดตั้ง app ผ่าน winget" loading="lazy" /><span><b>ติดตั้ง app</b>เลือกหลาย app แล้วลงทีเดียวผ่าน winget</span></a>
+            </div>
+            <div class="app-menu">
+              <small>ในโปรแกรมมีอะไรบ้าง</small>
+              <ul>
+                <li><i class="fa-regular fa-star"></i><div><b>เริ่มต้น</b>แนะนำโปรแกรมและวิธีใช้</div></li>
+                <li><i class="fa-solid fa-house"></i><div><b>หน้าแรก</b>ดูสเปกและคะแนนสุขภาพเครื่อง ดูแลเครื่องได้ในคลิกเดียว</div></li>
+                <li><i class="fa-solid fa-robot"></i><div><b>ผู้ช่วย AI</b>เล่าอาการ แล้ว AI ตรวจเครื่องและบอกวิธีแก้</div></li>
+                <li><i class="fa-solid fa-box-archive"></i><div><b>ติดตั้งแอป</b>ลงหลาย app พร้อมกันในคลิกเดียว</div></li>
+                <li><i class="fa-solid fa-wrench"></i><div><b>ไดรเวอร์</b>หา driver ที่ขาด แล้วพาไปเว็บผู้ผลิตให้ตรงรุ่น</div></li>
+                <li><i class="fa-solid fa-broom"></i><div><b>ล้างเครื่อง</b>ลบ file ขยะ และคืน RAM</div></li>
+                <li><i class="fa-solid fa-gamepad"></i><div><b>ปรับเล่นเกม</b>เปิด Game Mode ปรับ mouse และแผนพลังงาน</div></li>
+                <li><i class="fa-solid fa-power-off"></i><div><b>เปิดพร้อมเครื่อง</b>ปิดโปรแกรมที่ไม่จำเป็นตอนเปิดคอม ให้เครื่องเปิดเร็วขึ้น</div></li>
+                <li><i class="fa-solid fa-heart-pulse"></i><div><b>แก้ปัญหา</b>แก้ internet หลุด taskbar ค้าง และซ่อม file ระบบ</div></li>
+              </ul>
+            </div>
+            <ul class="feat-list">
+              <li>อ่าน Hardware ID เพื่อรู้ว่าอุปกรณ์ที่ยังไม่มี driver เป็นของค่ายไหน แล้วพาไปโหลดให้ถูกตัว</li>
+              <li>AI ตรวจเครื่องจริงก่อนตอบ เช่น internet เสีย จะเช็กทีละจุดจนเจอว่าเสียตรงไหน</li>
+              <li>สระภาษาไทยในโปรแกรมหลุด เลยเขียนตัวตัดบรรทัดภาษาไทยเอง</li>
+              <li>ปลอดภัยไว้ก่อน ไม่ปิด Windows Defender ไม่ลบไฟล์ส่วนตัว และ AI สั่งอะไรเองไม่ได้</li>
+            </ul>
+            <p class="learn"><i class="fa-regular fa-lightbulb"></i> ทำให้คนอื่นใช้ยากกว่าทำใช้เองมาก ทุกปุ่มต้องเข้าใจง่าย และต้องไม่ทำเครื่องใครพัง</p>
+            <div class="dl-box">
+              <a class="btn btn-grad" href="downloads/PoloOptimizer-Setup-1.3.exe" download><i class="fa-solid fa-download"></i> ดาวน์โหลด Polo Optimizer</a>
+              <small>Windows 10 / 11 · v1.3 · 14.8 MB<br />ถ้า Windows ขึ้นจอฟ้าเตือน ให้กด More info → Run anyway (เพราะโปรแกรมยังไม่ได้ซื้อใบรับรอง code signing)</small>
+            </div>
+            <div class="tags"><span>Python</span><span>customtkinter</span><span>PowerShell</span><span>winget</span><span>Gemini API</span><span>PyInstaller</span><span>Inno Setup</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 03 ACTIVITIES & AWARDS ===== -->
+    <section class="section" id="activities">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>03 — CERTIFICATES</span>
+        <h2 class="split">ใบประกาศที่ <span class="hl">ได้รับ.</span></h2>
+        <p>Online course ที่ผมเรียนและสอบเอง นอกเวลาเรียน</p>
+      </header>
+      <div class="certs" data-stagger>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/hackerrank-javascript-intermediate.png" target="_blank"><img src="certs/hackerrank-javascript-intermediate.png" alt="ใบประกาศ JavaScript (Intermediate) จาก HackerRank" loading="lazy" /></a>
+          <div class="cert-body"><small>11 OCT 2026 · HACKERRANK</small><h4>JavaScript (Intermediate)</h4><p>สอบต่อจากระดับ Basic ที่ผ่านไปเมื่อสี่วันก่อน โจทย์ยากขึ้น แต่ก็ผ่านมาได้</p></div>
+        </article>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/samsung-ai-workplace.png" target="_blank"><img src="certs/samsung-ai-workplace.png" alt="ใบประกาศ Introduction to Artificial Intelligence in the Workplace จาก Samsung Innovation Campus" loading="lazy" /></a>
+          <div class="cert-body"><small>11 OCT 2026 · SAMSUNG INNOVATION CAMPUS</small><h4>Introduction to Artificial Intelligence in the Workplace</h4><p>ดูภาพกว้างว่า AI ถูกเอาไปใช้ในงานจริงยังไงบ้าง ต่อจากที่ลองทำ AI ไว้ใช้เองมาแล้ว</p></div>
+        </article>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/samsung-software-dev-testing.png" target="_blank"><img src="certs/samsung-software-dev-testing.png" alt="ใบประกาศ Software Development Concepts and Testing with Python จาก Samsung Innovation Campus" loading="lazy" /></a>
+          <div class="cert-body"><small>11 OCT 2026 · SAMSUNG INNOVATION CAMPUS</small><h4>Software Development Concepts and Testing with Python</h4><p>เรื่องการทดสอบโปรแกรม ตรงกับตอนทำ GuardianEye ที่ต้องลองล้มซ้ำๆ เพื่อเช็กว่ามันเตือนถูกหรือเปล่า</p></div>
+        </article>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/samsung-genai-software-dev.png" target="_blank"><img src="certs/samsung-genai-software-dev.png" alt="ใบประกาศ Generative AI in Software Development จาก Samsung Innovation Campus" loading="lazy" /></a>
+          <div class="cert-body"><small>11 OCT 2026 · SAMSUNG INNOVATION CAMPUS</small><h4>Generative AI in Software Development</h4><p>เรียนว่าจะใช้ AI ช่วยเขียนโปรแกรมยังไงให้ถูกวิธี เพราะตอนทำ project ผมก็ใช้ AI ช่วยตอนติดอยู่แล้ว</p></div>
+        </article>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/samsung-python-data-structures.png" target="_blank"><img src="certs/samsung-python-data-structures.png" alt="ใบประกาศ Python Mini-Course: Complex Data Structures จาก Samsung Innovation Campus" loading="lazy" /></a>
+          <div class="cert-body"><small>11 OCT 2026 · SAMSUNG INNOVATION CAMPUS</small><h4>Python Mini-Course: Complex Data Structures</h4><p>เรียนต่อจาก course พื้นฐาน เรื่องเก็บข้อมูลซับซ้อนอย่าง list กับ dict ซ้อนกัน แบบที่ AI ส่วนตัวใช้เก็บความจำ</p></div>
+        </article>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/samsung-intro-python.png" target="_blank"><img src="certs/samsung-intro-python.png" alt="ใบประกาศ Introduction to Programming with Python จาก Samsung Innovation Campus" loading="lazy" /></a>
+          <div class="cert-body"><small>11 OCT 2026 · SAMSUNG INNOVATION CAMPUS</small><h4>Introduction to Programming with Python</h4><p>ทบทวนพื้นฐาน Python ให้แน่นขึ้น เพราะเป็นภาษาที่ผมใช้ทำทั้ง 3 project</p></div>
+        </article>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/cisco-intro-cybersecurity.png" target="_blank"><img src="certs/cisco-intro-cybersecurity.png" alt="ใบประกาศ Introduction to Cybersecurity จาก Cisco Networking Academy" loading="lazy" /></a>
+          <div class="cert-body"><small>08 OCT 2026 · CISCO NETWORKING ACADEMY</small><h4>Introduction to Cybersecurity</h4><p>ปูพื้นเรื่องภัย cyber และวิธีดูแลข้อมูลกับเครื่องของตัวเอง ต่อจากที่ชอบยุ่งกับคอมอยู่แล้ว</p></div>
+        </article>
+        <article class="cert card" data-anim="zoom">
+          <a class="cert-img" href="certs/hackerrank-javascript-basic.png" target="_blank"><img src="certs/hackerrank-javascript-basic.png" alt="ใบประกาศ JavaScript (Basic) จาก HackerRank" loading="lazy" /></a>
+          <div class="cert-body"><small>07 OCT 2026 · HACKERRANK</small><h4>JavaScript (Basic)</h4><p>สอบผ่าน Skill Certification เป็นข้อสอบเขียน code จริงแบบจับเวลา</p></div>
+        </article>
+      </div>
+    </section>
+
+
+
+    <!-- ===== 05 CONTACT ===== -->
+    <section class="section" id="contact">
+      <header class="sec-head">
+        <span class="kicker"><i class="kline"></i>04 — WHAT'S NEXT</span>
+        <h2 class="split">ผมแก้คอมเป็นแล้ว<br /><span class="hl">ต่อไปอยากสร้างมันเป็น</span></h2>
+        <p>
+          <span class="nw">ผมไม่ได้เป็นแค่คนที่อยากเรียนวิศวะคอม</span> <b class="nw">ผมเป็นคนที่เริ่มทำไปแล้ว</b><br />
+          <span class="nw">งานใน website นี้ผมทำจากการลองผิดลองถูกเอง</span> <span class="nw">ทำได้ แต่ยังไม่รู้ลึกว่าทำไมมันถึงทำงาน</span><br />
+          <span class="nw">เลยอยากไปเรียนต่อที่ <b>วิศวกรรมคอมพิวเตอร์ ม.เกษตรศาสตร์</b></span> <span class="nw">ให้เข้าใจมันจริงๆ ไม่ใช่แค่ทำให้มันใช้ได้</span>
+        </p>      </header>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Posarin Sukdee</span>
+      <span class="mono">Portfolio · CPE @ KU · TCAS70</span>
+    </footer>
+  </main>
+
+  <!-- ===== CHATBOT ===== -->
+  <button class="chat-fab" id="chatFab" aria-label="ถาม PosarinBot"><i class="fa-solid fa-comment-dots"></i><span class="fab-tip">ถาม PosarinBot</span></button>
+  <aside class="chat" id="chat" aria-label="PosarinBot">
+    <div class="chat-head">
+      <span class="chat-ava"><i class="fa-solid fa-robot"></i></span>
+      <div><b>PosarinBot</b><small>Bot ตอบคำถามเกี่ยวกับโปโล</small></div>
+      <button id="chatClose" aria-label="close"><i class="fa-solid fa-minus"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-quick" id="chatQuick"><button>ทำไมวิศวะคอม?</button><button>กล้องจับคนล้ม</button><button>AI ส่วนตัว</button><button>ใบประกาศ</button><button>ติดต่อ</button></div>
+    <form class="chat-input" id="chatForm"><input id="chatText" placeholder="พิมพ์คำถาม..." autocomplete="off" /><button aria-label="send"><i class="fa-solid fa-arrow-up"></i></button></form>
+  </aside>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="card3d.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
