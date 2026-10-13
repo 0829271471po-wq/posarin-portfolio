@@ -81,7 +81,7 @@
         <p class="eyebrow up"><i class="live"></i> TCAS70 · COMPUTER ENGINEERING PORTFOLIO</p>
         <h1 class="headline up"><span id="typed">ผมเริ่มทำไปแล้ว.</span><b class="caret"></b></h1>
         <p class="intro-text up">
-          ผมไม่ได้รอให้เข้ามหาวิทยาลัยก่อนแล้วค่อยเริ่ม ตอนนี้ผมมีกล้อง AI จับคนล้มที่ทำจากกล้องตัวละ 300 บาท
+          ผมไม่ได้รอให้เข้ามหาวิทยาลัยก่อนแล้วค่อยเริ่ม ตอนนี้ผมมีกล้อง AI จับคนล้มและจำหน้าคนในบ้านได้ ที่ทำจากกล้องตัวละ 300 บาท
           AI ที่จำได้ว่าเราเคยคุยอะไรกันไว้ และโปรแกรมดูแลคอมที่ทำเป็นตัวติดตั้งให้คนอื่นลงได้
           ผม <b>โปสรินท์ สุขดี (โปโล)</b> ม.6 โรงเรียนอยุธยาวิทยาลัย <b>GPAX 3.20</b> (5 ภาคเรียน)
           Website นี้รวบรวมสิ่งที่ผมทำไปแล้ว ส่วน <b>วิศวกรรมคอมพิวเตอร์ ม.เกษตรศาสตร์</b> คือที่ที่ผมอยากไปทำให้มันดีกว่านี้
@@ -152,7 +152,7 @@
           <span class="pbadge pb2"><i class="fa-brands fa-python"></i> Python</span>
           <span class="pbadge pb3"><i class="fa-solid fa-screwdriver-wrench"></i> PC Hardware</span>
         </article>
-        <article class="cell stat card" data-anim="zoom"><strong data-to="3">0</strong><span>Projects</span><small>กล้องจับคนล้ม · AI ส่วนตัว · Polo Optimizer</small></article>
+        <article class="cell stat card" data-anim="zoom"><strong data-to="3">0</strong><span>Projects</span><small>กล้องจับคนล้ม + จำหน้า · AI ส่วนตัว · Polo Optimizer</small></article>
         <article class="cell stat card" data-anim="zoom"><strong data-to="3">0</strong><span>Languages</span><small>Python · JavaScript · C</small></article>
         <article class="cell cell-quote card" data-anim="flip">
           <i class="fa-solid fa-quote-left"></i>
@@ -215,8 +215,8 @@
           <span class="work-no">01</span><div class="work-icon"><i class="fa-solid fa-video"></i></div>
           <div>
             <span class="feat-badge"><i class="fa-solid fa-video"></i> AI CAMERA</span>
-            <h3>GuardianEye กล้องจับคนล้ม</h3>
-            <p>ที่บ้านผมมียายอยู่ด้วย ผมเลยคิดอยู่บ่อยๆ ว่าถ้าวันไหนยายล้มตอนที่ไม่มีใครอยู่ใกล้ๆ จะทำยังไง เลยลองเอากล้อง ESP32-CAM (ตัวละประมาณ 300 บาท) มาตั้งไว้ ให้มันส่งภาพเข้าคอม แล้วให้คอมดูว่ามีคนล้มไหม ถ้าล้มแล้วไม่ลุกขึ้นมา มันจะส่งรูปเข้า Telegram พร้อมบอกว่าใครล้ม คนในบ้านจะได้รู้ทันที</p>
+            <h3>GuardianEye กล้องจับคนล้ม และจำหน้าคนในบ้านได้</h3>
+            <p>ที่บ้านผมมียายอยู่ด้วย ผมเลยคิดอยู่บ่อยๆ ว่าถ้าวันไหนยายล้มตอนที่ไม่มีใครอยู่ใกล้ๆ จะทำยังไง เลยลองเอากล้อง ESP32-CAM (ตัวละประมาณ 300 บาท) มาตั้งไว้ ให้มันส่งภาพเข้าคอม แล้วให้คอมดูว่ามีคนล้มไหม และ<b>จำหน้าว่าเป็นใคร</b> ถ้าล้มแล้วไม่ลุกขึ้นมา มันจะส่งรูปเข้า Telegram พร้อมบอกชื่อคนที่ล้ม และถ้ามีคนแปลกหน้าเข้ามาในบ้านก็เตือนด้วย</p>
             <div class="flow">
               <span><i class="fa-solid fa-camera"></i> กล้อง ESP32</span><i class="fa-solid fa-arrow-right"></i>
               <span><i class="fa-solid fa-person-falling"></i> ดูท่าทาง</span><i class="fa-solid fa-arrow-right"></i>
@@ -226,7 +226,7 @@
             <ul class="feat-list">
               <li>ตอนแรกแค่นั่งเก้าอี้หรือก้มเก็บของมันก็เตือนแล้ว เลยต้องเพิ่มเงื่อนไข ให้ดูว่าตัวเอียงแค่ไหน สะโพกตกเร็วไหม แล้วต้องนอนอยู่เกิน 10 วินาที ถึงจะนับว่าล้ม</li>
               <li>ตัว ESP32-CAM มี RAM น้อย run AI เองไม่ได้ เลยให้มันส่งภาพมาอย่างเดียว ให้คอมคิดแทน</li>
-              <li>ถ้าในภาพมีหลายคน มันจะจำหน้าไว้ตั้งแต่ตอนเดินผ่าน ล้มแบบหันหลังให้กล้องก็ยังรู้ว่าเป็นใคร</li>
+              <li>จำหน้าคนในบ้านได้ (ใช้ OpenCV YuNet + SFace) ถ้าในภาพมีหลายคน มันจะจำหน้าไว้ตั้งแต่ตอนเดินผ่าน ล้มแบบหันหลังให้กล้องก็ยังรู้ว่าเป็นใคร ส่วนคนที่ไม่รู้จักจะเตือนว่าเป็นคนแปลกหน้า</li>
               <li>ถ้า Wi-Fi สะดุดหรือกล้อง reboot มันจะต่อกล้องใหม่เองทุก 3 วินาที ไม่ต้องปิดเปิดโปรแกรมใหม่</li>
             </ul>
             <p class="learn"><i class="fa-regular fa-lightbulb"></i> ทำให้มันจับได้ว่ามีคนล้มไม่ยากเท่าไหร่ ที่ยากคือทำยังไงไม่ให้มันเตือนมั่ว เพราะถ้าเตือนผิดบ่อยๆ คนในบ้านก็จะไม่สนใจมันแล้ว</p>
