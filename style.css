@@ -772,3 +772,4 @@ body.id3d-grabbing { user-select: none; }
 .shots.shots-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .shots.shots-3 img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top center; }
 @media (max-width: 760px) { .shots.shots-3 { grid-template-columns: 1fr; } .shots.shots-3 img { aspect-ratio: auto; max-height: 520px; object-fit: contain; } }
+.shots.shots-ge img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center top; background: #000; }
