@@ -1,7 +1,7 @@
 ﻿# อัปโหลดเว็บขึ้น Netlify (ลิงก์เดิม) — ใช้: ดับเบิลคลิก deploy.bat หรือรัน powershell -File deploy.ps1
 # ครั้งแรกจะถาม Access Token แล้วเก็บไว้ที่ %USERPROFILE%\.netlify-token (ไม่ได้อยู่ในโฟลเดอร์เว็บ)
 $ErrorActionPreference = "Stop"
-$site = "dynamic-bienenstitch-0b0b53.netlify.app"
+$site = "posarin-portfolio.netlify.app"
 $tokenFile = Join-Path $env:USERPROFILE ".netlify-token"
 $root = $PSScriptRoot
 

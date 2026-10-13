@@ -2,7 +2,7 @@
 
 Website portfolio ของ โปสรินท์ สุขดี (โปโล) ม.6 โรงเรียนอยุธยาวิทยาลัย สำหรับยื่น TCAS70 วิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์
 
-**ดูเว็บ:** https://dynamic-bienenstitch-0b0b53.netlify.app
+**ดูเว็บ:** https://posarin-portfolio.netlify.app
 
 ## ผลงานในเว็บ (แต่ละอันมี repo ของตัวเอง)
 
