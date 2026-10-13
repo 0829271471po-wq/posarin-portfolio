@@ -767,23 +767,3 @@ body.id3d-grabbing { user-select: none; }
 .flip-btn:hover { border-color: var(--accent); box-shadow: 0 0 18px rgba(var(--rgb), 0.3); }
 @media (max-width: 960px) { .id3d-stage { height: 560px; min-height: 0; } }
 @media (max-width: 600px) { .id3d-stage { height: 500px; } }
-
-/* ===== Phones: lighter effects so scrolling stays smooth ===== */
-@media (max-width: 760px), (pointer: coarse) {
-  body { background-attachment: scroll; }
-  body::before { animation: none; filter: none; opacity: 0.55; }
-  .nav.scrolled { backdrop-filter: none; background: rgba(3, 10, 8, 0.95); }
-  .pill, .side-btns button, .pbadge, .lightbox { backdrop-filter: none; }
-  .phone, .pbadge { animation: none; }
-  .intro::after { animation: none; }
-  [data-anim] { transform: translateY(24px); will-change: auto; }
-  .section { transform: translateY(30px); }
-  .w > span { transition-duration: 0.6s; }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-}
-@media (max-width: 600px) {
-  .chat-fab { width: 46px; height: 46px; font-size: 1.05rem; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); }
-  .chat { bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
-}

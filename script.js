@@ -135,9 +135,7 @@ addEventListener("pointermove", (e) => {
   bgGlow.style.setProperty("--x", mx + "px");
   bgGlow.style.setProperty("--y", my + "px");
 });
-// phones and tablets: no custom cursor and no PCB animation (keeps scrolling smooth and saves battery)
-const LITE = matchMedia("(pointer: coarse), (max-width: 760px), (prefers-reduced-motion: reduce)").matches;
-if (!LITE) (function follow() {
+(function follow() {
   rx += (mx - rx) * 0.18;
   ry += (my - ry) * 0.18;
   ring.style.transform = `translate(${rx}px, ${ry}px)`;
@@ -537,7 +535,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // ===== Background: faint PCB traces with a few slow current pulses =====
 (function pcbBackground() {
   const cv = document.getElementById("pcb");
-  if (!cv || LITE) { if (cv) cv.remove(); return; }
+  if (!cv) return;
   const ctx = cv.getContext("2d");
   const CELL = 36;
   const DIRS = [[1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1], [1, -1]];
