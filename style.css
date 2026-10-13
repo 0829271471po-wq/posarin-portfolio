@@ -767,3 +767,5 @@ body.id3d-grabbing { user-select: none; }
 .flip-btn:hover { border-color: var(--accent); box-shadow: 0 0 18px rgba(var(--rgb), 0.3); }
 @media (max-width: 960px) { .id3d-stage { height: 560px; min-height: 0; } }
 @media (max-width: 600px) { .id3d-stage { height: 500px; } }
+.msg-go { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: -4px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--accent); background: rgba(var(--rgb), 0.12); color: var(--accent-2); font-family: var(--body); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.msg-go:hover { background: var(--grad); color: #04140e; }

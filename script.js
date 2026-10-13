@@ -450,13 +450,13 @@ document.querySelectorAll("#seg button").forEach((btn) => {
 const chat = document.getElementById("chat");
 const chatBody = document.getElementById("chatBody");
 const KB = [
-  { k: ["เกษตร", "ku", "มก", "เลือกที่นี่", "ทำไมเลือก"], a: "โปโลอยากพัฒนาความรู้ทั้งด้านการเขียนโปรแกรมและระบบคอมพิวเตอร์ที่วิศวะคอม ม.เกษตรครับ 🎓 เพื่อเอาไปต่อยอด GuardianEye ให้ตรวจจับการล้มแม่นขึ้น และทำงานได้ต่อเนื่องเวลามีปัญหา เช่น ระบบปฏิบัติการ ระบบฝังตัว และความปลอดภัยระบบคอมพิวเตอร์ ดูแผนได้ที่ส่วน Why KU ท้ายเว็บ" },
-  { k: ["ทำไม", "วิศวะ", "why", "เหตุผล", "แรงบันดาลใจ"], a: "เริ่มจากโปโลเล่นเกมแล้วอยากรีดประสิทธิภาพคอม ปรับไปก็เจอปัญหา เลยต้องนั่งแก้เองครับ แก้บ่อยจนอยากรู้ว่าข้างในมันทำงานยังไง เลยหัดเขียน code แล้วลองทำกล้องจับคนล้มกับ AI ส่วนตัวออกมา ทำได้แล้วแต่ยังไม่เข้าใจลึก เลยอยากไปเรียนวิศวะคอมให้รู้จริงครับ" },
-  { k: ["กล้อง", "guardian", "ล้ม", "ผู้สูงอายุ", "esp32", "camera"], a: "อันนี้คือ GuardianEye ครับ 📷 ไอเดียมาจากที่บ้านโปโลมียายอยู่ด้วย เลยอยากมีอะไรช่วยดูเวลายายล้ม เอากล้อง ESP32-CAM ตัวละประมาณ 300 บาทมาตั้งไว้ ส่งภาพเข้าคอมให้ดูท่าทางคน ถ้ามีคนล้มแล้วไม่ลุก มันจะส่งรูปเข้า Telegram พร้อมบอกว่าใครล้ม ส่วนที่ยากสุดคือทำให้มันไม่เตือนมั่วตอนแค่นั่งเก้าอี้" },
-  { k: ["ai ส่วนตัว", "ความจำ", "สมอง", "llm", "แชตบอต", "chatbot", "ผู้ช่วย ai"], a: "เป็น AI ที่โปโลทำไว้คุยเองใน Telegram ครับ 🧠 ต่างจาก chatbot ทั่วไปตรงที่มันจำเรื่องที่เคยคุยได้ จดโน้ตให้ได้ และค่อยๆ ปรับวิธีตอบให้เข้ากับคนที่คุยด้วย" },
-  { k: ["optimizer", "ปรับคอม", "ดูแลคอม", "โปรแกรมดูแล", "polo optimizer"], a: "Polo Optimizer เป็นโปรแกรมบน Windows ที่โปโลทำครับ 🛠️ รวมการลง app หา driver ล้าง file ขยะ ปรับเครื่องเล่นเกม และแก้ปัญหาคอมไว้ในที่เดียว มีผู้ช่วย AI ที่ตรวจเครื่องจริงก่อนตอบ และทำเป็นตัวติดตั้งให้คนอื่นลงได้" },
-  { k: ["ผลงาน", "โปรเจ", "project", "ทำอะไร"], a: "ตอนนี้มีสามอันครับ กล้องจับคนล้ม (GuardianEye), AI ส่วนตัวที่จำเรื่องของเราได้ และ Polo Optimizer โปรแกรมดูแลคอมสำหรับคนที่ใช้คอมไม่เก่ง เลื่อนลงไปดูที่ส่วน Projects ได้เลย" },
-  { k: ["รางวัล", "award", "ใบประกาศ", "cert", "เกียรติบัตร"], a: "มีแปดใบครับ 📜 จาก Samsung ห้าใบ (Introduction to Artificial Intelligence in the Workplace, Software Development Concepts and Testing with Python, Generative AI in Software Development, Introduction to Programming with Python, Python Mini-Course: Complex Data Structures), Introduction to Cybersecurity จาก Cisco และ JavaScript ทั้งระดับ Basic กับ Intermediate จาก HackerRank เป็น course ที่เรียนเองนอกเวลา ดูใบจริงได้ที่ส่วน Certificates" },
+  { k: ["เกษตร", "ku", "มก", "เลือกที่นี่", "ทำไมเลือก"], a: "โปโลอยากพัฒนาความรู้ทั้งด้านการเขียนโปรแกรมและระบบคอมพิวเตอร์ที่วิศวะคอม ม.เกษตรครับ 🎓 เพื่อเอาไปต่อยอด GuardianEye ให้ตรวจจับการล้มแม่นขึ้น และทำงานได้ต่อเนื่องเวลามีปัญหา เช่น ระบบปฏิบัติการ ระบบฝังตัว และความปลอดภัยระบบคอมพิวเตอร์ ดูแผนได้ที่ส่วน Why KU ท้ายเว็บ", go: ["#contact", "ดูส่วน Why KU"] },
+  { k: ["ทำไม", "วิศวะ", "why", "เหตุผล", "แรงบันดาลใจ"], a: "เริ่มจากโปโลเล่นเกมแล้วอยากรีดประสิทธิภาพคอม ปรับไปก็เจอปัญหา เลยต้องนั่งแก้เองครับ แก้บ่อยจนอยากรู้ว่าข้างในมันทำงานยังไง เลยหัดเขียน code แล้วลองทำกล้องจับคนล้มกับ AI ส่วนตัวออกมา ทำได้แล้วแต่ยังไม่เข้าใจลึก เลยอยากไปเรียนวิศวะคอมให้รู้จริงครับ", go: ["#about", "อ่านเรื่องเต็มใน About"] },
+  { k: ["กล้อง", "guardian", "ล้ม", "ผู้สูงอายุ", "esp32", "camera"], a: "อันนี้คือ GuardianEye ครับ 📷 ไอเดียมาจากที่บ้านโปโลมียายอยู่ด้วย เลยอยากมีอะไรช่วยดูเวลายายล้ม เอากล้อง ESP32-CAM ตัวละประมาณ 300 บาทมาตั้งไว้ ส่งภาพเข้าคอมให้ดูท่าทางคน ถ้ามีคนล้มแล้วไม่ลุก มันจะส่งรูปเข้า Telegram พร้อมบอกว่าใครล้ม ส่วนที่ยากสุดคือทำให้มันไม่เตือนมั่วตอนแค่นั่งเก้าอี้", go: [".works > .work:nth-child(1)", "ดูผลงาน GuardianEye"] },
+  { k: ["ai ส่วนตัว", "ความจำ", "สมอง", "llm", "แชตบอต", "chatbot", "ผู้ช่วย ai"], a: "เป็น AI ที่โปโลทำไว้คุยเองใน Telegram ครับ 🧠 ต่างจาก chatbot ทั่วไปตรงที่มันจำเรื่องที่เคยคุยได้ จดโน้ตให้ได้ และค่อยๆ ปรับวิธีตอบให้เข้ากับคนที่คุยด้วย", go: [".works > .work:nth-child(2)", "ดูผลงาน AI ส่วนตัว"] },
+  { k: ["optimizer", "ปรับคอม", "ดูแลคอม", "โปรแกรมดูแล", "polo optimizer"], a: "Polo Optimizer เป็นโปรแกรมบน Windows ที่โปโลทำครับ 🛠️ รวมการลง app หา driver ล้าง file ขยะ ปรับเครื่องเล่นเกม และแก้ปัญหาคอมไว้ในที่เดียว มีผู้ช่วย AI ที่ตรวจเครื่องจริงก่อนตอบ และทำเป็นตัวติดตั้งให้คนอื่นลงได้", go: [".works > .work:nth-child(3)", "ดูผลงาน Polo Optimizer"] },
+  { k: ["ผลงาน", "โปรเจ", "project", "ทำอะไร"], a: "ตอนนี้มีสามอันครับ กล้องจับคนล้ม (GuardianEye), AI ส่วนตัวที่จำเรื่องของเราได้ และ Polo Optimizer โปรแกรมดูแลคอมสำหรับคนที่ใช้คอมไม่เก่ง เลื่อนลงไปดูที่ส่วน Projects ได้เลย", go: ["#projects", "ไปที่ส่วน Projects"] },
+  { k: ["รางวัล", "award", "ใบประกาศ", "cert", "เกียรติบัตร"], a: "มีแปดใบครับ 📜 จาก Samsung ห้าใบ (Introduction to Artificial Intelligence in the Workplace, Software Development Concepts and Testing with Python, Generative AI in Software Development, Introduction to Programming with Python, Python Mini-Course: Complex Data Structures), Introduction to Cybersecurity จาก Cisco และ JavaScript ทั้งระดับ Basic กับ Intermediate จาก HackerRank เป็น course ที่เรียนเองนอกเวลา ดูใบจริงได้ที่ส่วน Certificates", go: ["#activities", "ดูใบประกาศทั้งหมด"] },
   { k: ["โรงเรียน", "school", "อยุธยา", "เรียนที่", "ม.6"], a: "โปโลอยู่ ม.6 โรงเรียนอยุธยาวิทยาลัยครับ 🏫" },
   { k: ["เกรด", "gpax", "gpa", "ผลการเรียน", "คะแนน"], a: "GPAX 3.20 ครับ (5 ภาคเรียน) 📚 วิชาคอมพิวเตอร์ได้ 3.5 กับ 4 ส่วนฟิสิกส์ดีขึ้นเรื่อยๆ จาก 2 จนได้ 4" },
   { k: ["ทักษะ", "skill", "ภาษา", "ถนัด"], a: "ใช้ Python เยอะสุดครับ เพราะทำทั้ง 3 project ส่วน JavaScript สอบผ่าน HackerRank ถึงระดับ Intermediate แล้ว ส่วน C ยังเรียนอยู่จาก CS50 แต่ที่ถนัดจริงๆ คือแต่งกับแก้ปัญหาคอม 🔧" },
@@ -481,6 +481,21 @@ function ask(q) {
   setTimeout(() => {
     typing.remove();
     addMsg(hit ? hit.a : "อันนี้ยังตอบไม่ได้ครับ 😅 Bot ตัวนี้รู้แค่เรื่องผลงาน ใบประกาศ ทักษะ กับเหตุผลที่อยากเรียนวิศวะคอม ลองกดปุ่มด้านล่างดูนะครับ", "bot");
+    if (hit && hit.go) {
+      const [sel, label] = hit.go;
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "msg-go";
+      b.innerHTML = `<i class="fa-solid fa-arrow-down"></i> ${label}`;
+      b.addEventListener("click", () => {
+        const el = document.querySelector(sel);
+        if (!el) return;
+        if (innerWidth < 700) chat.classList.remove("open");
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      chatBody.appendChild(b);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
   }, 600);
 }
 let greeted = false;
