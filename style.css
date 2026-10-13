@@ -331,6 +331,9 @@ body.ready .id-wrap.up { transition-delay: 0.3s; }
 .shots span { font-size: 0.82rem; line-height: 1.55; color: var(--muted); }
 .shots span b { display: block; font-family: var(--head); font-size: 0.92rem; font-weight: 700; color: var(--text); }
 @media (max-width: 600px) { .shots { grid-template-columns: 1fr; } }
+.gh-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border-2); font-family: var(--head); font-size: 0.85rem; font-weight: 600; color: var(--text); transition: 0.25s; }
+.gh-link i { font-size: 1.05rem; }
+.gh-link:hover, .gh-link:focus-visible { border-color: var(--accent); background: rgba(var(--rgb), 0.1); }
 .dl-box { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin: 0 0 16px; }
 .dl-box small { flex: 1 1 260px; min-width: 0; font-size: 0.8rem; line-height: 1.6; color: var(--muted); }
 .app-menu { margin: 0 0 16px; padding: 16px 18px; border-radius: 14px; background: rgba(255, 255, 255, 0.025); border: 1px solid var(--border); }
