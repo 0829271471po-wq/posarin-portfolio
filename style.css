@@ -331,6 +331,14 @@ body.ready .id-wrap.up { transition-delay: 0.3s; }
 .shots span { font-size: 0.82rem; line-height: 1.55; color: var(--muted); }
 .shots span b { display: block; font-family: var(--head); font-size: 0.92rem; font-weight: 700; color: var(--text); }
 @media (max-width: 600px) { .shots { grid-template-columns: 1fr; } }
+.why-plan { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.why-plan .card { display: flex; flex-direction: column; gap: 8px; padding: 24px; border-radius: 18px; background: var(--card); border: 1px solid var(--border); }
+.why-plan small { font-weight: 600; font-size: 0.8rem; color: var(--accent-2); }
+.why-plan h4 { font-family: var(--head); font-size: 1.1rem; font-weight: 700; line-height: 1.45; }
+.why-plan p { color: var(--muted); font-size: 0.92rem; flex: 1; }
+.why-to { display: flex; gap: 8px; align-items: baseline; padding-top: 12px; border-top: 1px dashed var(--border-2); font-size: 0.88rem; font-weight: 600; color: var(--text); }
+.why-to i { color: var(--accent-2); font-size: 0.8rem; }
+@media (max-width: 900px) { .why-plan { grid-template-columns: 1fr; } }
 .why-letter { max-width: 760px; margin: 0 auto; padding: 34px 38px; border-radius: 22px; background: linear-gradient(160deg, rgba(0, 102, 100, 0.18), var(--card)); border: 1px solid var(--border-2); display: flex; flex-direction: column; gap: 16px; }
 .why-letter p { color: var(--muted); line-height: 1.95; text-indent: 2em; }
 .why-letter p b { color: var(--text); font-weight: 600; }
